@@ -1,0 +1,118 @@
+ppo_babyai/scripts/train.py --env MiniGrid-DoorKey-5x5-v0 --model DoorKey --save-interval 10 --frames 80000
+
+Namespace(algo='ppo', env='MiniGrid-DoorKey-5x5-v0', model='DoorKey', seed=1, log_interval=1, save_interval=10, procs=16, frames=80000, epochs=4, batch_size=256, frames_per_proc=None, discount=0.99, lr=0.001, gae_lambda=0.95, entropy_coef=0.01, value_loss_coef=0.5, max_grad_norm=0.5, optim_eps=1e-08, optim_alpha=0.99, clip_eps=0.2, recurrence=1, text=False, mem=False)
+
+Device: cuda
+
+Environments loaded
+
+Training status loaded
+
+Observations preprocessor loaded
+Model loaded
+
+ACModel(
+  (image_conv): Sequential(
+    (0): Conv2d(3, 16, kernel_size=(2, 2), stride=(1, 1))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(16, 32, kernel_size=(2, 2), stride=(1, 1))
+    (4): ReLU()
+    (5): Conv2d(32, 64, kernel_size=(2, 2), stride=(1, 1))
+    (6): ReLU()
+  )
+  (actor): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=7, bias=True)
+  )
+  (critic): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=1, bias=True)
+  )
+)
+
+Optimizer loaded
+
+U 1 | F 002048 | FPS 0551 | D 3 | rR:μσmM 0.00 0.00 0.00 0.00 | F:μσmM 0.0 0.0 0 0 | H 1.930 | V -0.091 | pL -0.015 | vL 0.002 | ∇ 0.036
+U 2 | F 004096 | FPS 1179 | D 5 | rR:μσmM 0.03 0.12 0.00 0.50 | F:μσmM 243.1 26.6 140.0 250.0 | H 1.923 | V -0.064 | pL -0.027 | vL 0.001 | ∇ 0.027
+U 3 | F 006144 | FPS 1328 | D 7 | rR:μσmM 0.03 0.12 0.00 0.50 | F:μσmM 243.1 26.6 140.0 250.0 | H 1.939 | V -0.051 | pL -0.009 | vL 0.000 | ∇ 0.007
+U 4 | F 008192 | FPS 1305 | D 8 | rR:μσmM 0.00 0.00 0.00 0.00 | F:μσmM 250.0 0.0 250.0 250.0 | H 1.941 | V -0.038 | pL -0.014 | vL 0.000 | ∇ 0.007
+U 5 | F 010240 | FPS 1279 | D 10 | rR:μσmM 0.00 0.00 0.00 0.00 | F:μσmM 250.0 0.0 250.0 250.0 | H 1.944 | V -0.033 | pL -0.006 | vL 0.000 | ∇ 0.003
+U 6 | F 012288 | FPS 1279 | D 11 | rR:μσmM 0.02 0.09 0.00 0.37 | F:μσmM 245.3 18.2 175.0 250.0 | H 1.941 | V -0.022 | pL -0.011 | vL 0.001 | ∇ 0.009
+U 7 | F 014336 | FPS 1387 | D 13 | rR:μσmM 0.04 0.17 0.00 0.68 | F:μσmM 239.9 39.2 88.0 250.0 | H 1.940 | V -0.015 | pL -0.010 | vL 0.002 | ∇ 0.014
+U 8 | F 016384 | FPS 1394 | D 14 | rR:μσmM 0.08 0.19 0.00 0.68 | F:μσmM 232.4 42.3 88.0 250.0 | H 1.937 | V -0.003 | pL -0.008 | vL 0.000 | ∇ 0.013
+U 9 | F 018432 | FPS 1372 | D 16 | rR:μσmM 0.07 0.16 0.00 0.56 | F:μσmM 235.6 33.9 122.0 250.0 | H 1.937 | V 0.001 | pL -0.009 | vL 0.001 | ∇ 0.017
+U 10 | F 020480 | FPS 1402 | D 17 | rR:μσmM 0.05 0.15 0.00 0.56 | F:μσmM 238.6 32.8 122.0 250.0 | H 1.940 | V -0.009 | pL -0.003 | vL 0.000 | ∇ 0.004
+Status saved
+U 11 | F 022528 | FPS 1375 | D 19 | rR:μσmM 0.07 0.18 0.00 0.67 | F:μσmM 234.6 42.5 92.0 250.0 | H 1.931 | V -0.001 | pL -0.012 | vL 0.002 | ∇ 0.024
+U 12 | F 024576 | FPS 1332 | D 20 | rR:μσmM 0.10 0.19 0.00 0.67 | F:μσmM 229.2 43.4 92.0 250.0 | H 1.928 | V 0.016 | pL -0.004 | vL 0.001 | ∇ 0.013
+U 13 | F 026624 | FPS 1413 | D 22 | rR:μσmM 0.17 0.27 0.00 0.73 | F:μσmM 212.2 63.3 74.0 250.0 | H 1.922 | V 0.041 | pL -0.015 | vL 0.005 | ∇ 0.046
+U 14 | F 028672 | FPS 1365 | D 23 | rR:μσmM 0.28 0.33 0.00 0.90 | F:μσmM 185.6 80.3 28.0 250.0 | H 1.930 | V 0.033 | pL -0.018 | vL 0.005 | ∇ 0.031
+U 15 | F 030720 | FPS 1350 | D 25 | rR:μσmM 0.18 0.25 0.00 0.78 | F:μσmM 213.2 58.6 60.0 250.0 | H 1.929 | V 0.049 | pL -0.000 | vL 0.002 | ∇ 0.019
+U 16 | F 032768 | FPS 1359 | D 26 | rR:μσmM 0.31 0.34 0.00 0.87 | F:μσmM 177.6 81.1 35.0 250.0 | H 1.902 | V 0.070 | pL -0.021 | vL 0.004 | ∇ 0.042
+U 17 | F 034816 | FPS 1314 | D 28 | rR:μσmM 0.45 0.34 0.00 0.92 | F:μσmM 143.8 83.5 21.0 250.0 | H 1.870 | V 0.100 | pL -0.038 | vL 0.007 | ∇ 0.068
+U 18 | F 036864 | FPS 1271 | D 29 | rR:μσmM 0.54 0.34 0.00 0.91 | F:μσmM 119.6 84.3 24.0 250.0 | H 1.840 | V 0.151 | pL -0.046 | vL 0.011 | ∇ 0.090
+U 19 | F 038912 | FPS 1260 | D 31 | rR:μσmM 0.66 0.22 0.20 0.94 | F:μσmM 94.7 60.8 18.0 221.0 | H 1.807 | V 0.232 | pL -0.051 | vL 0.014 | ∇ 0.090
+U 20 | F 040960 | FPS 1172 | D 33 | rR:μσmM 0.63 0.29 0.00 0.90 | F:μσmM 97.6 70.5 28.0 250.0 | H 1.734 | V 0.323 | pL -0.077 | vL 0.018 | ∇ 0.106
+Status saved
+U 21 | F 043008 | FPS 1084 | D 35 | rR:μσmM 0.80 0.11 0.49 0.96 | F:μσmM 55.7 31.4 10.0 143.0 | H 1.640 | V 0.444 | pL -0.091 | vL 0.014 | ∇ 0.088
+U 22 | F 045056 | FPS 1180 | D 37 | rR:μσmM 0.86 0.09 0.61 0.96 | F:μσmM 38.4 24.3 11.0 108.0 | H 1.499 | V 0.590 | pL -0.113 | vL 0.012 | ∇ 0.104
+U 23 | F 047104 | FPS 1178 | D 38 | rR:μσmM 0.91 0.05 0.73 0.97 | F:μσmM 26.1 13.6 9.0 75.0 | H 1.366 | V 0.701 | pL -0.109 | vL 0.007 | ∇ 0.109
+U 24 | F 049152 | FPS 1285 | D 40 | rR:μσmM 0.92 0.03 0.81 0.97 | F:μσmM 23.3 9.1 9.0 54.0 | H 1.341 | V 0.768 | pL -0.067 | vL 0.004 | ∇ 0.082
+U 25 | F 051200 | FPS 1299 | D 41 | rR:μσmM 0.92 0.04 0.76 0.97 | F:μσmM 20.9 9.8 8.0 68.0 | H 1.294 | V 0.808 | pL -0.030 | vL 0.002 | ∇ 0.040
+U 26 | F 053248 | FPS 1220 | D 43 | rR:μσmM 0.93 0.02 0.85 0.97 | F:μσmM 19.7 6.7 8.0 41.0 | H 1.294 | V 0.828 | pL -0.011 | vL 0.001 | ∇ 0.029
+U 27 | F 055296 | FPS 1209 | D 45 | rR:μσmM 0.93 0.03 0.85 0.97 | F:μσmM 18.2 7.0 8.0 43.0 | H 1.234 | V 0.849 | pL -0.007 | vL 0.001 | ∇ 0.030
+U 28 | F 057344 | FPS 1343 | D 46 | rR:μσmM 0.94 0.02 0.83 0.97 | F:μσmM 16.7 6.2 7.0 46.0 | H 1.268 | V 0.851 | pL -0.002 | vL 0.001 | ∇ 0.029
+U 29 | F 059392 | FPS 1311 | D 48 | rR:μσmM 0.93 0.03 0.83 0.97 | F:μσmM 19.2 7.3 8.0 47.0 | H 1.344 | V 0.841 | pL 0.004 | vL 0.001 | ∇ 0.024
+U 30 | F 061440 | FPS 1160 | D 50 | rR:μσmM 0.93 0.03 0.84 0.97 | F:μσmM 19.6 7.1 9.0 45.0 | H 1.309 | V 0.834 | pL 0.012 | vL 0.001 | ∇ 0.039
+Status saved
+U 31 | F 063488 | FPS 1259 | D 51 | rR:μσmM 0.92 0.03 0.80 0.97 | F:μσmM 21.0 9.1 9.0 56.0 | H 1.280 | V 0.824 | pL 0.001 | vL 0.002 | ∇ 0.035
+U 32 | F 065536 | FPS 1243 | D 53 | rR:μσmM 0.94 0.02 0.85 0.97 | F:μσmM 17.5 6.4 7.0 42.0 | H 1.206 | V 0.840 | pL -0.016 | vL 0.001 | ∇ 0.028
+U 33 | F 067584 | FPS 1169 | D 55 | rR:μσmM 0.94 0.02 0.86 0.97 | F:μσmM 17.1 6.2 8.0 38.0 | H 1.221 | V 0.850 | pL -0.009 | vL 0.001 | ∇ 0.027
+U 34 | F 069632 | FPS 1285 | D 56 | rR:μσmM 0.94 0.02 0.88 0.97 | F:μσmM 17.9 6.3 8.0 34.0 | H 1.243 | V 0.843 | pL 0.011 | vL 0.001 | ∇ 0.040
+U 35 | F 071680 | FPS 1248 | D 58 | rR:μσmM 0.92 0.10 0.00 0.96 | F:μσmM 20.7 24.2 10.0 250.0 | H 1.376 | V 0.821 | pL 0.026 | vL 0.003 | ∇ 0.047
+U 36 | F 073728 | FPS 1323 | D 60 | rR:μσmM 0.91 0.10 0.00 0.96 | F:μσmM 24.0 24.7 11.0 250.0 | H 1.502 | V 0.813 | pL 0.023 | vL 0.004 | ∇ 0.056
+U 37 | F 075776 | FPS 1259 | D 61 | rR:μσmM 0.92 0.04 0.74 0.97 | F:μσmM 23.5 11.8 8.0 71.0 | H 1.497 | V 0.803 | pL 0.020 | vL 0.002 | ∇ 0.041
+U 38 | F 077824 | FPS 1400 | D 63 | rR:μσmM 0.92 0.03 0.78 0.96 | F:μσmM 21.7 9.3 10.0 60.0 | H 1.407 | V 0.812 | pL -0.000 | vL 0.002 | ∇ 0.035
+U 39 | F 079872 | FPS 1327 | D 64 | rR:μσmM 0.92 0.03 0.82 0.96 | F:μσmM 22.5 8.7 10.0 49.0 | H 1.389 | V 0.817 | pL -0.002 | vL 0.001 | ∇ 0.033
+U 40 | F 081920 | FPS 1335 | D 66 | rR:μσmM 0.93 0.02 0.86 0.97 | F:μσmM 19.5 6.4 7.0 38.0 | H 1.369 | V 0.828 | pL -0.006 | vL 0.001 | ∇ 0.024
+Status saved
+ppo_babyai/scripts/train.py --env MiniGrid-DoorKey-5x5-v0 --model DoorKey --save-interval 10 --frames 80000
+
+Namespace(algo='ppo', env='MiniGrid-DoorKey-5x5-v0', model='DoorKey', seed=1, log_interval=1, save_interval=10, procs=16, frames=80000, epochs=4, batch_size=256, frames_per_proc=None, discount=0.99, lr=0.001, gae_lambda=0.95, entropy_coef=0.01, value_loss_coef=0.5, max_grad_norm=0.5, optim_eps=1e-08, optim_alpha=0.99, clip_eps=0.2, recurrence=1, text=False, mem=False)
+
+Device: cuda
+
+Environments loaded
+
+Training status loaded
+
+Observations preprocessor loaded
+Model loaded
+
+ACModel(
+  (image_conv): Sequential(
+    (0): Conv2d(3, 16, kernel_size=(2, 2), stride=(1, 1))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(16, 32, kernel_size=(2, 2), stride=(1, 1))
+    (4): ReLU()
+    (5): Conv2d(32, 64, kernel_size=(2, 2), stride=(1, 1))
+    (6): ReLU()
+  )
+  (actor): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=7, bias=True)
+  )
+  (critic): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=1, bias=True)
+  )
+)
+
+Optimizer loaded
+
