@@ -1,10 +1,10 @@
-# 🧠 Reinforcement Learning with MiniGrid
+# Reinforcement Learning with MiniGrid
 
 This project provides a Streamlit-based interactive interface for experimenting with Reinforcement Learning (RL) techniques on the MiniGrid environment. It supports manual control, Q-learning, PPO training, performance comparison, and visualization — all from your browser!
 
 ---
 
-## 🚀 Features
+## Features
 
 ### 1. Manual Run
 - Use **arrow keys** to control the agent manually.
@@ -24,7 +24,7 @@ This project provides a Streamlit-based interactive interface for experimenting 
 
 ---
 
-## 📄 PPO Training Tab
+## PPO Training Tab
 
 Train an agent using **Proximal Policy Optimization (PPO)** by selecting custom arguments:
 
@@ -35,14 +35,14 @@ Train an agent using **Proximal Policy Optimization (PPO)** by selecting custom 
 
 ---
 
-## 📊 Evaluation Tab
+## Evaluation Tab
 
 - Load and evaluate your trained PPO model.
 - Provides summary statistics and success rate analysis.
 
 ---
 
-## 🎮 Visualization Tab
+## Visualization Tab
 
 - Select environment and trained model.
 - Click **Visualize** to watch the agent interact with the environment.
@@ -50,7 +50,8 @@ Train an agent using **Proximal Policy Optimization (PPO)** by selecting custom 
 
 ---
 
-## ✅ Steps to Run
+## Steps to Run
+
 
 1. Install dependencies:
    - Streamlit
